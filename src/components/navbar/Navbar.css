@@ -1,0 +1,214 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 150px;
+  overflow: hidden;
+  
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.nav-connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 100%);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+.vaishnavi{
+  position: relative;
+}
+.navbar h2{
+  padding: 0px 20px;
+  
+  
+}
+.vaishnavi-img{
+  position: absolute; 
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  height: 50px;
+  margin-top: 60px;
+}
+.nav-menu li img {
+  position: static;    
+  z-index: 1;          
+  width: 30px;
+  height: auto;
+  display: block;
+}
+.nav-mob-close{
+  display: none;
+}
+.nav-mob-open{
+  display: none;
+}
+.anchor-link{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+@media (max-width: 1140px){
+.navbar{
+  margin: 20px 39px;
+}
+.vaishnavi-img{
+  height: 46px;
+    margin-right: 87px;
+    margin-bottom: 2px;
+}
+.nav-menu{
+  gap: 40px;
+}
+}
+@media (max-width: 1024px) {
+  
+  .navbar {
+    overflow: hidden;
+    margin: 15px 40px;
+  }
+  .navbar h2{
+    padding: 15px 11px;
+  }
+  
+  .nav-connect {
+    display: none;
+  }
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
+  .nav-mob-close {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 290px;
+    width: 30px;
+  }
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 30px;
+    background-color: #1F0016;
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
+  }
+  .nav-menu li {
+    font-size: 30px;
+    padding-left: 100px;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .vaishnavi-img{
+    height: 50px;
+  }
+  
+  
+  
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    margin: 20px 50px;
+  }
+  
+  .nav-connect {
+    display: none;
+  }
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
+  .nav-mob-close {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 290px;
+    width: 30px;
+  }
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 30px;
+    background-color: #1F0016;
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
+  }
+  .nav-menu li {
+    font-size: 30px;
+    padding-left: 100px;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  
+}
+@media (max-width: 480px) {
+  .navbar {
+    margin: 10px 20px;
+    overflow: hidden;
+  }
+  
+  .navbar h2 {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .vaishnavi-img {
+    height: 40px;
+    margin-right: 2px;
+  }
+  .anchor-link {
+    font-size: 18px;
+  }
+  .nav-mob-open {
+    right: 15px;
+    top: 15px;
+    width: 24px;
+  }
+
+  .nav-mob-close {
+    left: 240px;
+    width: 24px;
+  }
+
+  .nav-menu {
+    width: 260px;
+    right: -260px;
+  }
+
+  .nav-menu li {
+    font-size: 20px;
+    padding-left: 40px;
+  }
+  
+}

@@ -1,0 +1,487 @@
+/* Updated Skills.css with original classes + about.css theme + gradient */
+
+/* ——————————————————————————————————————————————
+   Global & Base Styles
+—————————————————————————————————————————————— */
+body {
+  margin: 0;
+  padding: 0;
+  background: #161513;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ——————————————————————————————————————————————
+   Section Wrapper (if you use .skills elsewhere)
+—————————————————————————————————————————————— */
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 100px;
+  
+}
+
+/* ——————————————————————————————————————————————
+   Section Title
+—————————————————————————————————————————————— */
+.skills-title {
+  position: relative;
+}
+.skills-title h1 {
+  font-size: 80px;
+  font-weight: 600;
+  padding: 0 30px;
+}
+.skills-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+/* ——————————————————————————————————————————————
+   Utility Grid / Container (if used)
+—————————————————————————————————————————————— */
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.col {
+  width: 100%;
+  min-width: 300px;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* ——————————————————————————————————————————————
+   Heading Style (e.g. “Technical Skills”)
+—————————————————————————————————————————————— */
+.heading1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  background: linear-gradient(270deg, #DF8908 40%, #B415FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ——————————————————————————————————————————————
+   Skills List Container (vertical stack)
+—————————————————————————————————————————————— */
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  
+}
+
+/* ——————————————————————————————————————————————
+   Individual Skill Block
+   (icon → label → bar)
+—————————————————————————————————————————————— */
+.about-skills .about-skill {
+  display: flex;
+  flex-direction: column;
+  align-items:self-start;
+  gap: 7px;
+  width: 100%;
+  
+  transition: transform 0.3s ease;
+}
+.about-skills .about-skill:hover {
+  transform: scale(1.03);
+}
+
+/* Icon above text */
+.about-skills .about-skill i {
+  font-size: 26px;
+}
+
+/* Skill label */
+.about-skills .about-skill p {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ——————————————————————————————————————————————
+   Skill Bar Track
+—————————————————————————————————————————————— */
+
+.about-skills .about-skill hr {
+  --pct: 100%;
+  position: relative;
+  width: 100%;
+  height: 14px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 7px;
+  overflow: visible;
+  margin: 0;
+}
+
+.about-skills .about-skill hr::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--pct);
+  height: 100%;
+  background: linear-gradient(264deg, #DF8988 -5.09%, #B415FF 106.28%);
+  border-radius: 7px 0 0 7px;
+}
+
+.about-skills .about-skill hr::after {
+  content: var(--pct);
+  position: absolute;
+  top: -26px;
+  left: var(--pct);
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: #161513;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.bx{
+  font-size: 25px;
+}
+/* ——————————————————————————————————————————————
+   Gradient Fill (up to the inline width %)
+—————————————————————————————————————————————— */
+
+
+/* ——————————————————————————————————————————————
+   Percentage Badge Styling
+—————————————————————————————————————————————— */
+
+
+/* ——————————————————————————————————————————————
+   Set each bar’s width + badge content/position
+   (match your inline <hr style="width:XX%"> values)
+—————————————————————————————————————————————— */
+/* 1st skill: HTML at 50% */
+.about-skills .about-skill:nth-of-type(1) hr {
+  width: 100% !important;
+}
+.about-skills .about-skill:nth-of-type(1) hr::after {
+  left: 90%;
+  content: "90%";
+}
+
+/* 2nd skill: CSS at 70% */
+.about-skills .about-skill:nth-of-type(2) hr {
+  width: 100% !important;
+}
+.about-skills .about-skill:nth-of-type(2) hr::after {
+  left: 80%;
+  content: "80%";
+}
+
+/* 3rd skill: JavaScript at 40% */
+.about-skills .about-skill:nth-of-type(3) hr {
+  width: 100% !important;
+}
+.about-skills .about-skill:nth-of-type(3) hr::after {
+  left: 60%;
+  content: "60%";
+}
+
+/* 4th skill: React Js at 60% */
+.about-skills .about-skill:nth-of-type(4) hr {
+  width: 100% !important;
+}
+.about-skills .about-skill:nth-of-type(4) hr::after {
+  left: 50%;
+  content: "50%";
+}
+
+/* 5th skill: SQL at 80% */
+.about-skills .about-skill:nth-of-type(5) hr {
+  width: 100% !important;
+}
+.about-skills .about-skill:nth-of-type(5) hr::after {
+  left: 80%;
+  content: "80%";
+}
+
+
+
+
+
+/* Grid layout for radial bar section */
+.redial-bars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Each skill block */
+.redial-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.redial-bar:hover {
+  transform: scale(1.05);
+}
+
+/* Bigger SVG circle */
+.redial-bar svg {
+  width: 160px;
+  height: 160px;
+  transform: rotate(-90deg); /* So animation starts from top */
+}
+
+/* Progress background circle */
+.progress-bar {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 12;
+}
+
+/* Animated skill stroke with gradient */
+.path {
+  fill: none;
+  stroke: url(#gradient);
+  stroke-width: 12;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+}
+
+/* Animated individual skills */
+.path-1 { animation: animatePath1 4s ease-in-out forwards; }
+.path-2 { animation: animatePath2 4s ease-in-out forwards; }
+.path-3 { animation: animatePath3 4s ease-in-out forwards; }
+.path-4 { animation: animatePath4 4s ease-in-out forwards; }
+
+@keyframes animatePath1 {
+  from { stroke-dashoffset: 502; }
+  to   { stroke-dashoffset: calc(502 - (502 * 90 / 100)); }
+}
+@keyframes animatePath2 {
+  from { stroke-dashoffset: 502; }
+  to   { stroke-dashoffset: calc(502 - (502 * 93 / 100)); }
+}
+@keyframes animatePath3 {
+  from { stroke-dashoffset: 502; }
+  to   { stroke-dashoffset: calc(502 - (502 * 75 / 100)); }
+}
+@keyframes animatePath4 {
+  from { stroke-dashoffset: 502; }
+  to   { stroke-dashoffset: calc(502 - (502 * 90 / 100)); }
+}
+
+/* Text styles */
+.redial-bar .percentage {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.redial-bar .text {
+  font-size: 28px;
+  font-weight: 600;
+  background: linear-gradient(270deg, #DF8908 40%, #B415FF 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 4px;
+}
+
+
+
+ 
+
+/* ——————————————————————————————————————————————
+   CSS-variable progress bars
+—————————————————————————————————————————————— */
+.skill-bar {
+  position: relative;
+  width: 100%;                  /* full track */
+  height: 14px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 7px;
+  margin: 0;                    /* remove default hr margins */
+}
+
+/* colored fill up to var(--pct) */
+.skill-bar::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: var(--pct);
+  height: 100%;
+  background: linear-gradient(264deg, #DF8988 -5.09%, #B415FF 106.28%);
+  border-radius: 7px 0 0 7px;
+}
+
+/* percentage badge at end */
+.skill-bar::after {
+  content: var(--pct);
+  position: absolute;
+  top: -26px;
+  left: var(--pct);
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: #161513;
+  padding: 2px 6px;
+  border-radius: 4px;
+} 
+
+@media (max-width: 1024px) {
+  .skills{
+    overflow: hidden;
+  }
+
+  .heading1{
+    font-size: 44px;
+  }
+
+  .redial-bar svg {
+    width: 140px;
+    height: 140px;
+}
+.about-skills{
+  gap: 20px;
+}
+.row{
+  gap: 70px;
+}
+.redial-bar .text{
+  font-size: 20px;
+}
+.about-skills .about-skill{
+  gap: 5px;
+}
+.redial-bar{
+  gap: 0px;
+}
+}
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-section {
+    flex-direction: column;
+  }
+} 
+@media (max-width: 480px){
+  .skills-title h1{
+    font-size: 40px !important;
+    text-align: center !important;
+  }
+  .skills-title img{
+    right: -14px !important;
+    height: 33px !important;
+  }
+  .skills{
+    margin: 20px 12px !important;
+        gap: 30px !important;
+  }
+  .heading1{
+    font-size: 28px !important;
+    margin-bottom: 20px;
+  }
+  .about-skills .about-skill i{
+    font-size: 20px !important;
+  }
+  .about-skills .about-skill p{
+    font-size: 14px !important;
+  }
+  .about-skills{
+    padding: 10px;
+    gap: 5px
+  }
+  .about-skills .about-skill hr{
+    height: 8px;
+  }
+  .redial-bar .text{
+font-size: 16px;
+  }
+  .redial-bar .percentage{
+    font-size: 16px;
+  }
+  .redial-bar svg{
+    width: 100px;
+    height: 100px;
+  }
+  .redial-bars {
+    gap: 20px;
+  }
+  .row{
+    gap: 45px;
+  }
+  .redial-bars{
+    margin-bottom: 80px;
+  }
+}
+
+
+
+@media (max-width: 320px){
+  .skills-title h1{
+    font-size: 40px !important;
+    text-align: center !important;
+  }
+  .skills-title img{
+    right: -14px !important;
+    height: 33px !important;
+  }
+  .skills{
+    margin: 20px 12px !important;
+        gap: 30px !important;
+  }
+  .heading1{
+    font-size: 28px !important;
+    margin-bottom: 20px;
+  }
+  .about-skills .about-skill i{
+    font-size: 20px !important;
+  }
+  .about-skills .about-skill p{
+    font-size: 14px !important;
+  }
+  .about-skills{
+    padding: 10px;
+    gap: 5px
+  }
+  .about-skills .about-skill hr{
+    height: 8px;
+  }
+  .redial-bar .text{
+font-size: 16px;
+  }
+  .redial-bar .percentage{
+    font-size: 16px;
+  }
+  .redial-bar svg{
+    width: 100px;
+    height: 100px;
+  }
+  .redial-bars {
+    gap: 20px;
+  }
+  .row{
+    gap: 45px;
+  }
+  .redial-bars{
+    margin-bottom: 80px;
+  }
+}
+

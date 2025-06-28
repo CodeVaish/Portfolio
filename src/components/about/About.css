@@ -1,0 +1,210 @@
+.about {
+  display: flex;                     
+  flex-direction: column;          
+  align-items: center;              
+  justify-content: center;          
+  gap: 80px;                        
+  margin: 80px 170px;      
+  overflow: hidden;
+}
+.about-title {
+  position: relative;
+}
+
+.about-title h1 {
+  padding: 0px 30px;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.about-title img {
+  position: absolute; 
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.about-sections{
+  display: flex;
+  gap: 80px;
+}
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about-para {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  
+  padding: 0px;
+}
+
+.about-skill {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.about-skill p {
+  min-width: 150px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.about-skill hr {
+  outline: none;
+  border: none;
+  width: 50%;
+  height: 8px;
+  border-radius: 50px;
+  background: linear-gradient(264deg, #DF8988 -5.09%, #B415FF 106.28%);
+}
+.about-skill:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+
+
+@media (max-width: 1024px) {
+  .about {
+    gap: 60px;
+    margin: 60px 100px;
+  }
+
+  .about-title h1 {
+    font-size: 54px;
+    padding: 0 20px;
+  }
+
+  .about-title img {
+    width: 140px;
+    right: 0;
+  }
+
+  .about-sections {
+    gap: 50px;
+  }
+
+  .about-para {
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+  .about-skill p {
+    font-size: 22px;
+  }
+  .about-skills{
+    gap: 10px !important;
+  }
+  .about-skills .about-skill p {
+    font-size: 16px !important;
+  }
+  .about-skill hr {
+    height: 7px;
+  }
+  .about-right{
+    gap: 20px;
+  }
+  .about-skills .about-skill hr{
+    height: 8px;
+  }
+}
+
+/* For tablets and small devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .about {
+    gap: 50px;
+    margin: 50px 40px;
+    align-items: start;
+  }
+
+  .about-title h1 {
+    font-size: 46px;
+    padding: 0;
+  }
+
+  .about-title img {
+    width: 120px;
+    right: -20px;
+  }
+
+  .about-sections {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-left {
+    display: none;
+  }
+
+  .about-right {
+    gap: 40px;
+  }
+
+  .about-para {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .about-skill {
+    gap: 20px;
+  }
+
+  .about-skill p {
+    font-size: 18px;
+  }
+
+  .about-skill hr {
+    height: 5px;
+    width: 100%;
+  }
+}
+
+/* For mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .about {
+    margin: 10px 20px;
+    margin-bottom: 100px;
+  }
+  .about-skills{
+    gap: 15px !important;
+  }
+
+  .about-title h1 {
+    font-size: 36px;
+  }
+
+  .about-title img {
+    width: 100px;
+    right: -10px;
+  }
+  .about-right{
+    gap: 30px;
+  }
+
+  .about-para {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .about-skill p {
+    font-size: 16px;
+  }
+
+  .about-skill hr {
+    height: 4px;
+  }
+  .about-skills .about-skill p{
+    font-size: 16px !important;
+  }
+}
